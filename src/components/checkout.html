@@ -1,0 +1,62 @@
+<main class="checkout-page">
+  <header class="checkout-topbar">
+    <a class="store-brand" href="#" aria-label="Northstar Goods home"><span class="store-brand-mark" aria-hidden="true">N</span><span>northstar<span class="brand-light">goods</span></span></a>
+    <div class="checkout-secure"><span class="secure-indicator"></span> Demo checkout <span class="secure-divider">/</span> No charge will be made</div>
+  </header>
+
+  <div class="checkout-content">
+    <div class="checkout-intro">
+      <div class="checkout-steps" aria-label="Checkout progress"><span class="step-complete">01 <b>Cart</b></span><span class="step-rule"></span><span class="step-current">02 <b>Checkout</b></span><span class="step-rule"></span><span>03 <b>Confirmation</b></span></div>
+      <h1>Finish your order.</h1>
+      <p>Almost yours. Add your details to complete the demo purchase.</p>
+    </div>
+
+    <div class="checkout-grid" id="checkout-layout">
+      <form class="checkout-form" id="checkout-form">
+        <section class="checkout-section">
+          <div class="section-title"><span class="section-number">01</span><div><h2>Contact information</h2><p>Where should we send your receipt?</p></div></div>
+          <label class="checkout-field"><span>Email address</span><input id="customer-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required></label>
+        </section>
+
+        <section class="checkout-section">
+          <div class="section-title"><span class="section-number">02</span><div><h2>Shipping address</h2><p>Used only to calculate this demo order.</p></div></div>
+          <div class="field-grid">
+            <label class="checkout-field field-wide"><span>Full name</span><input name="name" type="text" placeholder="Alex Morgan" autocomplete="name" required></label>
+            <label class="checkout-field field-wide"><span>Address</span><input name="address" type="text" placeholder="123 Market Street" autocomplete="street-address" required></label>
+            <label class="checkout-field"><span>City</span><input name="city" type="text" placeholder="San Francisco" autocomplete="address-level2" required></label>
+            <label class="checkout-field"><span>ZIP code</span><input name="postal" type="text" inputmode="numeric" placeholder="94103" autocomplete="postal-code" required></label>
+          </div>
+        </section>
+
+        <section class="checkout-section payment-section">
+          <div class="section-title"><span class="section-number">03</span><div><h2>Payment method</h2><p>Choose how you’d like to pay.</p></div></div>
+          <div class="payment-options">
+            <label class="payment-option selected"><input type="radio" name="payment-method" value="card" checked><span class="radio-custom"></span><span class="payment-option-icon card-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><rect x="2.2" y="4" width="15.6" height="12" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M2.5 8h15M5.5 12h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="payment-option-copy"><strong>Card</strong><small>Use a demo card ending in 4242</small></span><span class="card-network">VISA</span></label>
+            <label class="payment-option"><input type="radio" name="payment-method" value="link"><span class="radio-custom"></span><span class="payment-option-icon link-icon" aria-hidden="true">↗</span><span class="payment-option-copy"><strong>Link</strong><small>Simulate a saved Link payment method</small></span></label>
+          </div>
+          <div class="demo-card-note" id="payment-note"><span class="note-dot"></span> Demo only. No card details are collected or sent.</div>
+        </section>
+      </form>
+
+      <aside class="order-card" aria-labelledby="order-title">
+        <div class="order-card-heading"><div><span class="order-kicker">YOUR ORDER</span><h2 id="order-title">Order summary</h2></div><span class="item-count"><span id="item-count">1</span> item</span></div>
+        <div class="order-product">
+          <div class="product-photo"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=260&auto=format&fit=crop&q=80" alt="Olive canvas daypack"></div>
+          <div class="product-info"><span class="product-label">EVERYDAY CARRY</span><h3>Canvas daypack</h3><p>Olive / 20L</p><div class="quantity-control" aria-label="Item quantity"><button id="quantity-decrease" type="button" aria-label="Decrease quantity">−</button><span id="quantity">1</span><button id="quantity-increase" type="button" aria-label="Increase quantity">+</button></div></div>
+          <strong class="product-price" id="product-subtotal">$64.00</strong>
+        </div>
+        <form class="promo-form" id="promo-form"><label class="visually-hidden" for="promo-code">Promo code</label><input id="promo-code" type="text" placeholder="Gift or discount code"><button type="submit">Apply</button></form>
+        <p class="promo-message" id="promo-message" aria-live="polite">Try code STUDIO10 for 10% off.</p>
+        <div class="order-totals"><div><span>Subtotal</span><strong id="subtotal">$64.00</strong></div><div><span>Shipping</span><strong id="shipping">$4.95</strong></div><div class="discount-row" id="discount-row" hidden><span>STUDIO10</span><strong id="discount">−$0.00</strong></div><div class="total-row"><span>Total <small>USD</small></span><strong id="total">$68.95</strong></div></div>
+        <button class="pay-button" id="pay-button" type="submit" form="checkout-form"><span>Pay $68.95</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <p class="order-fine-print"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> Secure demo flow · no real payment is processed</p>
+      </aside>
+    </div>
+
+    <section class="checkout-success" id="checkout-success" aria-live="polite" hidden>
+      <div class="success-icon"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m8 16.5 5.2 5.2L24 11" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span class="order-kicker">PAYMENT SIMULATED</span><h2>You’re all set.</h2><p>Your demo order <strong id="confirmation-id"></strong> is confirmed for <strong id="confirmation-total"></strong>.</p><p class="confirmation-email">Receipt preview sent to <span id="confirmation-email"></span></p><button class="restart-button" id="restart-checkout" type="button">Start another demo order <span aria-hidden="true">↗</span></button>
+    </section>
+  </div>
+  <footer class="checkout-footer"><span>Northstar Goods · Demo storefront</span><span>Powered by <strong>stripe</strong></span></footer>
+</main>
