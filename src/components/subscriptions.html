@@ -1,0 +1,22 @@
+<main class="subscriptions-app">
+  <header class="subscriptions-header"><a class="subscriptions-brand" href="#"><span class="subscriptions-mark">S</span><strong>stripe</strong></a><nav aria-label="Billing navigation"><span>Billing</span><b>/</b><strong>Subscriptions</strong></nav><span class="test-mode-chip"><i></i> TEST MODE</span></header>
+  <div class="subscriptions-content">
+    <section class="subscriptions-heading"><div><p class="subscription-eyebrow">RECURRING BILLING</p><h1>Plans &amp; subscriptions</h1><p>Choose a plan, start a trial, and manage renewals.</p></div><span class="demo-note">Demo workspace · no real billing</span></section>
+    <div class="billing-toolbar"><div><strong>Choose a plan</strong><span>Switch plans at any time in this simulation.</span></div><div class="billing-cycle"><span id="monthly-label" class="cycle-active">Monthly</span><label class="cycle-switch"><input id="annual-toggle" type="checkbox" aria-label="Bill annually"><span></span></label><span id="annual-label">Yearly <small>Save 2 months</small></span></div></div>
+
+    <div class="subscription-layout">
+      <section class="plan-column"><div class="plan-grid" id="plan-grid"></div>
+        <form class="subscription-start" id="subscription-form"><div><label for="subscriber-email">Email for billing updates</label><input id="subscriber-email" type="email" placeholder="you@example.com" required><label class="trial-choice"><input id="trial-toggle" type="checkbox" checked><span>Start with a 14-day free trial</span></label></div><button class="start-subscription" type="submit" id="start-subscription">Start free trial <span aria-hidden="true">→</span></button></form>
+      </section>
+
+      <aside class="subscription-aside">
+        <section class="subscription-state-card" aria-labelledby="subscription-state-title"><div class="aside-card-heading"><div><p class="subscription-eyebrow">CURRENT SUBSCRIPTION</p><h2 id="subscription-state-title">Subscription overview</h2></div><span class="state-symbol">↻</span></div>
+          <div class="subscription-empty" id="subscription-empty"><span class="empty-orbit">+</span><strong>No active subscription</strong><p>Select a plan to preview and start a subscription.</p></div>
+          <div class="subscription-active" id="subscription-active" hidden><div class="active-plan-line"><span class="active-plan-icon">N</span><div><strong id="active-plan-name">Growth</strong><small id="active-plan-description">For growing teams</small></div><span class="subscription-status" id="subscription-status">Trialing</span></div><div class="subscription-price"><strong id="active-price">$49</strong><span id="active-interval">per month</span></div><div class="subscription-detail"><span id="renewal-label">Trial ends</span><strong id="renewal-date">—</strong></div><div class="subscription-detail"><span>Payment method</span><strong>Visa ···· 4242</strong></div><p class="subscription-message" id="subscription-message">Your trial is active. No payment is due today.</p><button class="cancel-subscription" id="cancel-subscription" type="button">Cancel at period end</button></div>
+        </section>
+        <section class="invoice-card"><div class="invoice-title"><div><p class="subscription-eyebrow">BILLING HISTORY</p><h2>Recent invoices</h2></div><span class="invoice-count" id="invoice-count">0</span></div><div class="invoice-empty" id="invoice-empty">Invoices appear here after a subscription starts.</div><div class="invoice-list" id="invoice-list"></div></section>
+      </aside>
+    </div>
+    <p class="subscriptions-footnote"><span>i</span> A real integration should use Stripe Price IDs and verify subscription and invoice webhooks before granting access.</p>
+  </div>
+</main>
